@@ -141,8 +141,6 @@ lib/arm/libz.so
 lib/arm/linker
 
 # Audio
-etc/asound.conf
-etc/route_criteria.conf
 etc/tuning/audio/layout_probes.xml
 etc/tuning/audio/layout_topology.xml
 etc/tuning/audio/layout_types.xml
@@ -754,7 +752,10 @@ lib/hw/sensors.mofd_v1.so
 lib/libcontextarbitor.so
 lib/libnetd_client.so
 lib/libsensorhub.so
+lib/libvirtualsensors.so
 
 # WiFi
+etc/wifi/bcmdhd.cal
+etc/wifi/bcmdhd_zx551ml.cal
 etc/firmware/fw_bcmdhd_apsta.bin
 etc/firmware/fw_bcmdhd.bin
