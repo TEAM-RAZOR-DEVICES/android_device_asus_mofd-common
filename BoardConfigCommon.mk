@@ -25,6 +25,7 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := x86_64-linux-android-
 TARGET_BOARD_PLATFORM := moorefield
 TARGET_BOOTLOADER_BOARD_NAME := moorefield
 TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 
 TARGET_SPECIFIC_HEADER_PATH := device/asus/mofd-common/include
 
@@ -68,6 +69,9 @@ endif
 
 # Hardware
 BOARD_HARDWARE_CLASS := device/asus/mofd-common/cmhw
+
+# Healthd
+BOARD_HAL_STATIC_LIBRARIES += libhealthd.mofd_v1
 
 # Houdini: enable ARM codegen for x86
 BUILD_ARM_FOR_X86 := true
