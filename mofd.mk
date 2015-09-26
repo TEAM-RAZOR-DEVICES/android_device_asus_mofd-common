@@ -24,6 +24,10 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui
 DEVICE_PACKAGE_OVERLAYS := \
     device/asus/mofd-common/overlay
 
+# Asus properties
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.build.asus.sku=WW
+
 # Audio
 PRODUCT_PACKAGES += \
     libtinycompress \
@@ -154,6 +158,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libisv_omx_core
 
+# PowerHAL
+PRODUCT_PACKAGES += \
+    power.mofd_v1
+
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.status.polling.enable=0 \
@@ -180,6 +188,7 @@ PRODUCT_PACKAGES += \
     init.mofd_v1.rc \
     init.nfc.rc \
     init.platform.usb.rc \
+    init.power.mofd_v1.rc \
     init.readahead.rc \
     init.recovery.mofd_v1.rc \
     init.watchdog.rc \
