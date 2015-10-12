@@ -38,7 +38,7 @@ void healthd_board_init(struct healthd_config *config)
 {
     config->batteryChargeTypePath  = "/sys/class/power_supply/battery/status";
     config->mapBatteryStatusString = mapBatteryStatusString;
-    config->mapChargeTypeString    = mapChargeRateString;
+    config->mapChargeTypeString    = mapChargeTypeString;
 }
 
 
